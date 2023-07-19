@@ -26,7 +26,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Merchandising() {
+export default function Merchandising2() {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
