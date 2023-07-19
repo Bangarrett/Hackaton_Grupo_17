@@ -1,4 +1,3 @@
-
 import './App.css'
 import TrendingTracks from './components/Carrousel'
 
