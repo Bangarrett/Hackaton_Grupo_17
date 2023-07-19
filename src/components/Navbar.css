@@ -1,4 +1,10 @@
-.logo > img {
-    width: 30%;
-    height: 30%;
+
+nav {
+    height: 25%;
+    background-color: red;
+}
+
+.nav__logo > img {
+    width: 200px;
+    height: 200px;
 } 
