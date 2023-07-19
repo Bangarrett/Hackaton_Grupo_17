@@ -45,3 +45,19 @@ nav {
     width: 1rem;
     height: 1rem;
 }
+
+@media only screen and (min-width: 700px) {
+
+nav {
+    justify-content: space-between;
+}
+
+.nav__search {
+    margin-right: 5%;
+}
+
+.nav__logo {
+    margin-left: 5%;
+}
+    
+}
