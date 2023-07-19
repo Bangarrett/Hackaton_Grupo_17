@@ -1,6 +1,6 @@
 import './App.css'
 import TrendingTracks from './components/Carrousel'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 
 
 function App() {
