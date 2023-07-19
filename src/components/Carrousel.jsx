@@ -39,7 +39,13 @@ const TrendingTracks = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
   };
-
+  const handlePlay = async trackId => {
+    const response = await axios.get(`https://discoveryprovider.audius.co/v1/tracks/${trackId}/stream`);
+    const audioUrl = response.data.data;
+    console.log(audioUrl);
+    const audioElement = new Audio(audioUrl);
+    audioElement.play();
+  };
   return (
     <div>
       <style>
@@ -51,26 +57,26 @@ const TrendingTracks = () => {
         `}
       </style>
       <h2>Trending Tracks</h2>
-      <Slider {...settings}>
-        {tracks.map(track => (
-          <div key={track.id}>
-            {track.artwork && track.artwork['150x150'] && (
-              <img src={track.artwork['150x150']} alt={track.title} />
-            )}
-            <h3>{track.title}</h3>
-            <p>{track.user.name}</p>
-            <button onClick={() => handleLike(track.id)}>Like</button>
-          </div>
+    <Slider {...settings}>
+      {tracks.map(track => (
+        <div key={track.id}>
+          {track.artwork && track.artwork['150x150'] && (
+            <img src={track.artwork['150x150']} alt={track.title} />
+          )}
+          <h3>{track.title}</h3>
+          <p>{track.user.name}</p>
+          <button onClick={() => handleLike(track.id)}>Like</button>
+        </div>
+      ))}
+    </Slider>
+    <h2>Liked Tracks</h2>
+    <ul>
+      {tracks
+        .filter(track => likedTracks.includes(track.id))
+        .map(track => (
+          <li key={track.id}>{track.title}</li>
         ))}
-      </Slider>
-      <h2>Liked Tracks</h2>
-      <ul>
-        {tracks
-          .filter(track => likedTracks.includes(track.id))
-          .map(track => (
-            <li key={track.id}>{track.title}</li>
-          ))}
-      </ul>
+    </ul>
     </div>
   );
 };
