@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -26,7 +26,14 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Merchandising() {
+const MerchandisingContainer = styled('div')({
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  gap: '8px',
+});
+
+function ProductCard({ title, image, description }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -36,27 +43,19 @@ export default function Merchandising() {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="sale">
-            
-          </Avatar>
-        }
+        avatar={<Avatar sx={{ bgcolor: red[500] }} aria-label="sale" />}
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
         }
-        title="Rock T-shirt"
+        title={title}
         subheader=""
       />
-      <CardMedia
-        component="img"
-        height="250"
-        image=".\src\assets\pinkflo.jpg"
-        alt="T-shirt"
-      />
+      <CardMedia component="img" height="250" image={image} alt="T-shirt" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
+          {description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -77,21 +76,34 @@ export default function Merchandising() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph></Typography>
-          <Typography paragraph>
-            Size: L
-          </Typography>
-          <Typography paragraph>
-            Woman
-          </Typography>
-          <Typography paragraph>
-            
-          </Typography>
+          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>Heat</Typography>
+          <Typography paragraph>Heat oil</Typography>
+          <Typography paragraph>A</Typography>
           <Typography>
-          Pink Floyd was a British rock band, founded in London in 1965. Considered a cultural icon of the 20th century and one of the most influential, successful and acclaimed bands in the history of music
+            Set aside off of the heat to let rest for 10 minutes, and then
+            serve.
           </Typography>
         </CardContent>
       </Collapse>
     </Card>
+  );
+}
+
+export default function Merchandising() {
+  return (
+    <MerchandisingContainer>
+      <ProductCard
+        title="Rock T-shirt"
+        image=".\src\assets\pinkflo.jpg"
+        description=""
+      />
+      <ProductCard
+        title="Pop Mug"
+        image=".\src\assets\taza1.jpeg"
+        description=""
+      />
+      {/* Agrega más ProductCards */}
+    </MerchandisingContainer>
   );
 }
