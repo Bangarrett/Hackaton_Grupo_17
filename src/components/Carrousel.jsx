@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const TrendingTracks = () => {
   const [tracks, setTracks] = useState([]);
+  const [likedTracks, setLikedTracks] = useState([]);
 
   useEffect(() => {
     const fetchTrendingTracks = async () => {
@@ -13,7 +14,23 @@ const TrendingTracks = () => {
       setTracks(response.data.data.slice(0, 10));
     };
     fetchTrendingTracks();
+
+    const storedLikedTracks = localStorage.getItem('likedTracks');
+    if (storedLikedTracks) {
+      setLikedTracks(JSON.parse(storedLikedTracks));
+    }
   }, []);
+
+  const handleLike = trackId => {
+    setLikedTracks(prevLikedTracks => {
+      const isTrackLiked = prevLikedTracks.includes(trackId);
+      const updatedLikedTracks = isTrackLiked
+        ? prevLikedTracks.filter(id => id !== trackId)
+        : [...prevLikedTracks, trackId];
+      localStorage.setItem('likedTracks', JSON.stringify(updatedLikedTracks));
+      return updatedLikedTracks;
+    });
+  };
 
   const settings = {
     dots: true,
@@ -25,6 +42,14 @@ const TrendingTracks = () => {
 
   return (
     <div>
+      <style>
+        {`
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        `}
+      </style>
       <h2>Trending Tracks</h2>
       <Slider {...settings}>
         {tracks.map(track => (
@@ -34,9 +59,18 @@ const TrendingTracks = () => {
             )}
             <h3>{track.title}</h3>
             <p>{track.user.name}</p>
+            <button onClick={() => handleLike(track.id)}>Like</button>
           </div>
         ))}
       </Slider>
+      <h2>Liked Tracks</h2>
+      <ul>
+        {tracks
+          .filter(track => likedTracks.includes(track.id))
+          .map(track => (
+            <li key={track.id}>{track.title}</li>
+          ))}
+      </ul>
     </div>
   );
 };
