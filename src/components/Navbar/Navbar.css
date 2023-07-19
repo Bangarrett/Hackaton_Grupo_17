@@ -27,6 +27,11 @@ nav {
     border-radius: 50%;
 } 
 
+.nav__slogan {
+    width: 30%;
+    font-weight: bold;
+}
+
 .nav__search {
     position: relative;
 }
@@ -49,15 +54,24 @@ nav {
 @media only screen and (min-width: 700px) {
 
 nav {
+    height: 40%;
     justify-content: space-between;
+}
+
+.nav__logo {
+    height: 5rem;
+    width: 5rem;
+    margin-left: 5%;
+}
+
+.nav__slogan {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 40%;
 }
 
 .nav__search {
     margin-right: 5%;
-}
-
-.nav__logo {
-    margin-left: 5%;
 }
     
 }
