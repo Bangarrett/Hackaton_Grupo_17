@@ -3,45 +3,69 @@ import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { styled } from '@mui/material/styles';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 
-const CartItem = styled('div')(({ theme }) => ({
-  width: '240px', 
-  height: '30px', 
-  display: 'flex',  
+const CartContainer = styled('div')({
+  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+  width: '390px',
+  padding: '16px',
+  borderRadius: '8px',
+  background: 'linear-gradient(to right, #cac531, #f3f9a7)',
+});
+
+const CartHeader = styled('h2')({
+  textAlign: 'center',
+  marginBottom: '16px',
+  fontSize: '24px',
+  padding: '8px',
+  borderRadius: '8px',
+  background: 'linear-gradient(to right, #cac531, #f3f9a7)',
+});
+
+const CartItem = styled(ListItem)(({ theme }) => ({
+  width: '360px',
+  height: '40px',
+  display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: theme.spacing(2),
   borderBottom: `1px solid ${theme.palette.divider}`,
+  background: 'linear-gradient(to right, #cac531, #f3f9a7)',
 }));
 
 const DeleteButton = styled(IconButton)(({ theme }) => ({
   color: theme.palette.error.main,
 }));
 
-function Cart({ cartItems, removeFromCart }) {
+const Cart = ({ cartItems, removeFromCart }) => {
   return (
-    <div>
-      <h2>Carrito de Compra</h2>
-      {cartItems.length > 0 ? (
-        cartItems.map((item) => (
-          <CartItem key={item.product.id}>
-            <span>{item.product.title}</span>
-            <span>Cantidad: {item.quantity}</span>
-            <DeleteButton
-              aria-label="delete"
-              size="small"
-              onClick={() => removeFromCart(item.product.id)}
-            >
-              <DeleteIcon fontSize="small" />
-            </DeleteButton>
-          </CartItem>
-        ))
-      ) : (
-        <p>El carrito está vacío.</p>
-      )}
-    </div>
+    <CartContainer>
+      <CartHeader>Carrito de Compra</CartHeader>
+      <List>
+        {cartItems.length > 0 ? (
+          cartItems.map((item) => (
+            <CartItem key={item.product.id}>
+              <ListItemText primary={item.product.title} />
+              <ListItemText primary={`Cantidad: ${item.quantity}`} />
+              <DeleteButton
+                aria-label="delete"
+                size="small"
+                onClick={() => removeFromCart(item.product.id)}
+              >
+                <DeleteIcon fontSize="small" />
+              </DeleteButton>
+            </CartItem>
+          ))
+        ) : (
+          <ListItem>
+            <ListItemText primary="El carrito está vacío." />
+          </ListItem>
+        )}
+      </List>
+    </CartContainer>
   );
-}
+};
 
 Cart.propTypes = {
   cartItems: PropTypes.arrayOf(
@@ -54,4 +78,3 @@ Cart.propTypes = {
 };
 
 export default Cart;
-
