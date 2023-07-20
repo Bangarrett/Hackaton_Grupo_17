@@ -34,7 +34,7 @@ function Merchandising({ addToCart }) {
           title="Kygo Sudadera"
           image="./src/assets/kygo-camisa.webp"
           description=""
-          addToCart={() => addToCart({ id: 2, title: 'Sudadera Kygo' })}
+          addToCart={() => addToCart({ id: 3, title: 'Sudadera Kygo' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
