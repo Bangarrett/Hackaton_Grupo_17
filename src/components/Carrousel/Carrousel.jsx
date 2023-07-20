@@ -4,6 +4,8 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './Carrousel.css'
+
 
 const TrendingTracks = () => {
   const [tracks, setTracks] = useState([]);
@@ -72,20 +74,27 @@ const TrendingTracks = () => {
   };
   
   return (
-    <div>
+    <div className='carrousel'>
       <style>
         {`
           p{
             color: #777;
           }
           .carousel-title, .track-title {
-             color: ##777;
+          color: ##777;
           }
           .carousel-container {
-            background-image: linear-gradient(to right, #000000, #434343);
+            background: rgb(42,42,42);
+            background: linear-gradient(90deg, rgba(42,42,42,1) 0%, rgba(202,202,202,1) 100%);
             padding: 20px;
+<<<<<<< HEAD
             max-width: 100%;
             max-height: 80%;
+=======
+            
+            max-width: 1800px;
+            max-height: 400px;
+>>>>>>> e0fa328a1c3b5cc13487bb63853bef1f4ae0946f
           }
           .carousel-title {
             color: #777
@@ -120,7 +129,8 @@ const TrendingTracks = () => {
             border-radius:5px;
             background:#4b9cdb;
             color:white;
-            cursor:pointer
+            cursor:pointer;
+            width: 5rem;
           }
           button:hover{
               background:#3c8dc5
