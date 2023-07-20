@@ -3,6 +3,7 @@ import './App.css';
 import TrendingTracks from './components/Carrousel/Carrousel';
 import Merchandising from './components/card-item/Merchandising';
 import Cart from './components/card-item/Cart';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -43,12 +44,13 @@ function App() {
 
   return (
     <div className="app-container">
-      <div className="cart-container">
-        <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
-      </div>
       <div className="main-content">
+        <Navbar />
         <TrendingTracks /><br /><br /><br />
         <Merchandising addToCart={addToCart} />
+      </div>
+      <div className="cart-container">  
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
       </div>
     </div>
   );
