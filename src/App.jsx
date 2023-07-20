@@ -4,6 +4,7 @@ import TrendingTracks from './components/Carrousel/Carrousel';
 import Merchandising from './components/card-item/Merchandising';
 import Cart from './components/card-item/Cart';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -51,6 +52,7 @@ function App() {
       </div>
       <div className="cart-container">  
       <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+      <Footer/>
       </div>
     </div>
   );
