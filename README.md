@@ -11,6 +11,7 @@ The marketplace includes merchandising of the most popular bands and the posibil
 - [@helenaponted](https://github.com/helenaponted)
 - [@Bangarrett](https://github.com/Bangarrett)
 - [@erikalinares](https://github.com/Erikalinares)
+- [@isabellozano37](https://github.com/isabellozano37)
 
 ## Installation
 
