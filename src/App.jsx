@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import TrendingTracks from './components/Carrousel';
+import TrendingTracks from './components/Carrousel/Carrousel';
 import Merchandising from './components/card-item/Merchandising';
 import Cart from './components/card-item/Cart';
 
