@@ -26,7 +26,7 @@ const CartHeader = styled('h2')({
 });
 
 const CartItem = styled(ListItem)(({ theme }) => ({
-  width: '360px',
+  width: '490px',
   height: '40px',
   display: 'flex',
   alignItems: 'center',
