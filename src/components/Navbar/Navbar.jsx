@@ -1,6 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import './Navbar.css'
-
 const Navbar = () => {
     return (
         <>
@@ -9,37 +9,37 @@ const Navbar = () => {
         
 
         
-    <div class="hamburger-menu">
+    <div className="hamburger-menu">
     <input id="menu__toggle" type="checkbox" />
-    <label class="menu__btn" for="menu__toggle">
+    <label className="menu__btn" htmlFor="menu__toggle">
     <span></span>
     </label>
-        <div class="nav__logo">
+        <div className="nav__logo">
             <img src="src/assets/logo.png" alt="Image of the logo"/>
         </div>
-        <div class="nav__slogan">Unlock the Beat: Your One-Stop Song Shop</div>
-        <div class="nav__search-">
+        <div className="nav__slogan">Unlock the Beat: Your One-Stop Song Shop</div>
+        <div className="nav__search-">
                 <input type="search" placeholder="Search"></input>
                 <a href="#">
-                    <img class="nav__search--logo-" src="src\assets\searchlogo.png"/>
+                    <img className="nav__search--logo-" src="src\assets\searchlogo.png"/>
                 </a>
             </div>
             
-    <ul class="menu__box">
+    <ul className="menu__box">
         <li>
                 <a href="#">
-                    <img class="nav__search--logo" src="src\assets\searchlogo.png"/>
+                    <img className="nav__search--logo" src="src\assets\searchlogo.png"/>
                 </a>
         </li>
         
         <li>
-            <div class="nav__search">
+            <div className="nav__search">
                 <input type="search" placeholder="Search"></input>
             </div>
         </li>
         
-        <li><a class="menu__item" href="#">Contact</a></li>
-        <li><a class="menu__item" href="#">Twitter</a></li>
+        <li><a className="menu__item" href="#">Contact</a></li>
+        <li><a className="menu__item" href="#">Twitter</a></li>
     </ul>
     </div>
     </nav>

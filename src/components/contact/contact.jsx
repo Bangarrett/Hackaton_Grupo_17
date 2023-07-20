@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import {Header} from '../../components/Header/Header'
-import "./Contacto.css" // Archivo CSS para el estilo
+import "./Contacto.css" 
 import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
 import { Footer} from '../Footer/Footer'

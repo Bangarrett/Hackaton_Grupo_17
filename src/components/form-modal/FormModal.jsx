@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import './FormModal.css';
 
@@ -26,7 +27,7 @@ const FormModal = () => {
       {modalOpen && (
         <div className="form-modal">
           <div className="form-container">
-            <h2>¿Qué necesitas? 🙂</h2>
+            <h2>¿Qué necesitas?</h2>
             <div className="form-content">
             <label className="name" htmlFor="name">Nombre:</label>
             <input type="text" id="name" name="name" required />
