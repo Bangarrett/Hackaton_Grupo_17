@@ -4,6 +4,8 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './Carrousel.css'
+
 
 const TrendingTracks = () => {
   const [tracks, setTracks] = useState([]);
@@ -59,7 +61,7 @@ const TrendingTracks = () => {
         url: track.permalink_url,
       });
     } else {
-      alert('Web Share API no está disponible en este navegador');
+      alert('Web Share API not available');
     }
   };
 
@@ -72,36 +74,40 @@ const TrendingTracks = () => {
   };
   
   return (
-    <div>
+    <div className='carrousel'>
       <style>
         {`
           p{
-            color: #777;
+            color: #FFFF;
           }
           .carousel-title, .track-title {
-             color: ##777;
+          color: #FFFF
+          ;
           }
           .carousel-container {
-            background-image: linear-gradient(to right, #000000, #434343);
+  
+            background: rgb(90, 90, 90);
             padding: 20px;
-            border-radius: 10px;
-            max-width: 1800px;
-            max-height: 400px;
+            max-width: 100%;
+            max-height: 80%;
           }
           .carousel-title {
-            color: #777
+            color: #FFFFF
             color: white;
             text-align: center;
           }
           .track-title {
+            color: #FFFFF
             font-size: 18px;
             font-weight: bold;
             text-align: center;
           }
           .track-artist {
             font-size: 16px;
-            color: #777;
+            color: #FFFFF;
             text-align: center;
+
+          
           }
           img {
             display: block;
@@ -121,7 +127,8 @@ const TrendingTracks = () => {
             border-radius:5px;
             background:#4b9cdb;
             color:white;
-            cursor:pointer
+            cursor:pointer;
+            width: 5rem;
           }
           button:hover{
               background:#3c8dc5
@@ -141,8 +148,8 @@ const TrendingTracks = () => {
               )}
               <h3 className="track-title">{track.title}</h3>
               <p className="track-artist">{track.user.name}</p>
-              <p>Género: {track.genre}</p>
-              <p>Duración: {track.duration} segundos</p>
+              <p> Genre: {track.genre}</p>
+              <p> Durantion: {track.duration} seg</p>
               <audio ref={ref => (audioRefs.current[track.id] = ref)} src={track.preview_url} />
               {playingTracks[track.id] ? (
                 <button onClick={() => handlePause(track.id)}>Pause</button>

@@ -13,14 +13,14 @@ global.window = dom.window;
 
 test('FormModal displays the cancel button when the modal is open', () => {
   const { getAllByText, getByText } = render(<FormModal />);
-  const contactButtons = getAllByText('Contáctanos');
+  const contactButtons = getAllByText('CONTACT US');
   fireEvent.click(contactButtons[0]);
-  assert.ok(getByText('Cancelar'));
+  assert.ok(getByText('Cancel'));
 });
 test('FormModal displays the cancel button when the modal is open', () => {
   const { getAllByText, getByText } = render(<FormModal />);
-  const contactButtons = getAllByText('¿Qué necesitas?');
+  const contactButtons = getAllByText('What do you need?');
   fireEvent.click(contactButtons[0]);
-  assert.ok(getByText('Cancelar'));
+  assert.ok(getByText('Cancel'));
 });
 

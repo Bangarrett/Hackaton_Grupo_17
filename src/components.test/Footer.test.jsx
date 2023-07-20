@@ -13,14 +13,14 @@ global.window = dom.window;
 
 test('Footer renders and displays contact information', () => {
   const { getByText } = render(<Footer />);
-  assert.ok(getByText('Información de Contacto'));
-  assert.ok(getByText('Dirección: 123 Calle Principal'));
-  assert.ok(getByText('Teléfono: (123) 456-7890'));
-  assert.ok(getByText('Email: info@example.com'));
+  assert.ok(getByText('Contact Info'));
+  assert.ok(getByText('Address: 1 Old King Avenue'));
+  assert.ok(getByText('Phone: (123) 456-7890'));
+  assert.ok(getByText('Email: info@beathub.com'));
 });
 
 test('Footer renders and displays social media links', () => {
   const { getAllByText } = render(<Footer />);
-  const socialMediaElements = getAllByText('Redes Sociales');
+  const socialMediaElements = getAllByText('Social Media');
   assert.ok(socialMediaElements.length > 0);
 });
