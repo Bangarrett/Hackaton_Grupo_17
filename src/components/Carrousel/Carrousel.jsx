@@ -81,12 +81,13 @@ const TrendingTracks = () => {
             color: #777;
           }
           .carousel-title, .track-title {
-             color: ##777;
+          color: ##777;
           }
           .carousel-container {
-            background-image: linear-gradient(to right, #000000, #434343);
+            background: rgb(42,42,42);
+            background: linear-gradient(90deg, rgba(42,42,42,1) 0%, rgba(202,202,202,1) 100%);
             padding: 20px;
-            border-radius: 10px;
+            
             max-width: 1800px;
             max-height: 400px;
           }
@@ -123,7 +124,8 @@ const TrendingTracks = () => {
             border-radius:5px;
             background:#4b9cdb;
             color:white;
-            cursor:pointer
+            cursor:pointer;
+            width: 5rem;
           }
           button:hover{
               background:#3c8dc5
