@@ -4,6 +4,7 @@ import TrendingTracks from './components/Carrousel/Carrousel';
 import Merchandising from './components/card-item/Merchandising';
 import Cart from './components/card-item/Cart';
 import Navbar from './components/Navbar/Navbar';
+import contact from './Pages/contact.jsx';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -43,6 +44,7 @@ function App() {
   };
 
   return (
+    
     <div className="app-container">
       <div className="main-content">
         <Navbar />
