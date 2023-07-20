@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="info-contact">
-        <h3>Información de Contacto</h3>
-        <p>Dirección: 123 Calle Principal</p>
-        <p>Teléfono: (123) 456-7890</p>
-        <p>Email: info@example.com</p>
+        <h3>Contact Info</h3>
+        <p>Address: 1 Old King Avenue</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@beathub.com</p>
       </div>
       <div className="social-media">
-        <h3>Redes Sociales</h3>
+        <h3>Social Media</h3>
         <ul>
           <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
           <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a></li>
