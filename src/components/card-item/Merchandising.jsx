@@ -12,19 +12,28 @@ function Merchandising({ addToCart }) {
       {}
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <CardItem
-          title="Rock T-shirt"
-          image="./src/assets/pinkflo.jpg"
+          title="Camiseta Rolling Stones"
+          image="./src/assets/rolling-stones.jpg"
           description=""
-          addToCart={() => addToCart({ id: 1, title: 'Rock T-shirt' })}
+          addToCart={() => addToCart({ id: 1, title: 'Sudadera Kygo' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <CardItem
-          title="Taza de grupo"
+          title="Rock T-shirt"
+          image="./src/assets/pinkflo.jpg"
+          description=""
+          addToCart={() => addToCart({ id: 2, title: 'Rock T-shirt' })}
+          toggleFavorite={toggleFavorite}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <CardItem
+          title="Taza Pink Floyd"
           image="./src/assets/taza1.jpeg"
           description=""
-          addToCart={() => addToCart({ id: 2, title: 'Taza de grupo' })}
+          addToCart={() => addToCart({ id: 3, title: 'Taza de grupo' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
@@ -33,7 +42,43 @@ function Merchandising({ addToCart }) {
           title="Kygo Sudadera"
           image="./src/assets/kygo-camisa.webp"
           description=""
-          addToCart={() => addToCart({ id: 3, title: 'Sudadera Kygo' })}
+          addToCart={() => addToCart({ id: 4, title: 'Sudadera Kygo' })}
+          toggleFavorite={toggleFavorite}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <CardItem
+          title="Taza Música"
+          image="./src/assets/taza-musica.jpg"
+          description=""
+          addToCart={() => addToCart({ id: 5, title: 'Sudadera Kygo' })}
+          toggleFavorite={toggleFavorite}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <CardItem
+          title="DVD Deep Purple"
+          image="./src/assets/deep-purple.jpg"
+          description=""
+          addToCart={() => addToCart({ id: 6, title: 'Sudadera Kygo' })}
+          toggleFavorite={toggleFavorite}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <CardItem
+          title="Camiseta Led Zeppelin"
+          image="./src/assets/led-zeppelin.jpg"
+          description=""
+          addToCart={() => addToCart({ id: 7, title: 'Sudadera Kygo' })}
+          toggleFavorite={toggleFavorite}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <CardItem
+          title="CD Queen"
+          image="./src/assets/cd-queen.jpg"
+          description=""
+          addToCart={() => addToCart({ id: 8, title: 'Sudadera Kygo' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>

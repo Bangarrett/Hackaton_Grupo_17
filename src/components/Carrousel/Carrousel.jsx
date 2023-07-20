@@ -84,9 +84,8 @@ const TrendingTracks = () => {
           .carousel-container {
             background-image: linear-gradient(to right, #000000, #434343);
             padding: 20px;
-            border-radius: 10px;
-            max-width: 1800px;
-            max-height: 400px;
+            max-width: 100%;
+            max-height: 80%;
           }
           .carousel-title {
             color: #777
