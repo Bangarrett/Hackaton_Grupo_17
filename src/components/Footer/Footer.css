@@ -47,6 +47,8 @@
   @media (max-width: 600px) {
     .footer-container {
       flex-direction: column; 
+      
     }
+    
   }
   

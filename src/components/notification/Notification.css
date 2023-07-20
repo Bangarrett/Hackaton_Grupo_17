@@ -1,6 +1,6 @@
 .notification {
     padding: 10px 20px;
-	margin-top: 13%;
+	margin-top: 37%;
     box-shadow: 3px 4px 0px 0px #899599;
 	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
 	background-color:#ededed;
@@ -14,7 +14,7 @@
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #e1e2ed;
-	width: 10%;
+	width: 30%;
 }
 
 .notification:hoover {
@@ -25,4 +25,12 @@
 .notification:active {
 	position:relative;
 	top:1px;
+}
+
+@media only screen and (min-width: 700px) {
+
+	.notification{
+		margin-top: 13%;
+		width: 15%;
+	}
 }

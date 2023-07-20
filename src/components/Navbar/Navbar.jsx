@@ -9,9 +9,9 @@ const Navbar = () => {
         
 
         
-    <div className="hamburger-menu">
-    <input id="menu__toggle" type="checkbox" />
-    <label className="menu__btn" htmlFor="menu__toggle">
+    <div class="hamburger-menu">
+    <input className="nav_input" id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
     <span></span>
     </label>
         <div className="nav__logo">
