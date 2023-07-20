@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import './App.css';
-import TrendingTracks from './components/Carrousel/Carrousel';
-import Merchandising from './components/card-item/Merchandising';
+import './App.css'
+import Merchandising from './components/card-item/CardItem'
+// import Merchandising2 from './components/card-item/CardItem2'
+import TrendingTracks from './components/Carrousel/Carrousel'
+import Navbar from './components/Navbar/Navbar'
+import ContactAlert from './components/contact-alert/ContactAlert'
 import Cart from './components/card-item/Cart';
-import Navbar from './components/Navbar/Navbar';
+
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
