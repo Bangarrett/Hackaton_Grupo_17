@@ -146,7 +146,7 @@ nav {
 @media only screen and (min-width: 700px) {
 
 nav {
-    height: 40%;
+    height: 20%;
     justify-content: space-between;
 }
 
