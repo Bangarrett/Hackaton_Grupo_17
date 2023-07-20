@@ -10,7 +10,7 @@ const Navbar = () => {
 
         
     <div class="hamburger-menu">
-    <input id="menu__toggle" type="checkbox" />
+    <input className="nav_input" id="menu__toggle" type="checkbox" />
     <label class="menu__btn" for="menu__toggle">
     <span></span>
     </label>
