@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import FormModal from './components/FormModal.jsx';
 import Notification from './components/notification/Notification';
+import FormModal from './components/form-modal/FormModal'
 
 // eslint-disable-next-line react/prop-types
 function App({ cartItems, addToCart, removeFromCart }) {
