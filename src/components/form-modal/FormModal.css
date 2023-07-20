@@ -117,7 +117,7 @@ button {
   }
   
   .open-button {
-    background-color: rgb(34, 34, 244);
+    background-color: rgb(46, 46, 233);
     color: white;
     height: 3rem;
     width: 10rem;
@@ -127,7 +127,7 @@ button {
   }
 
   .contact-button:hover {
-    background-color: rgb(56, 56, 184);
+    background-color: rgb(9, 9, 208);
   }
 
   .form-content {
