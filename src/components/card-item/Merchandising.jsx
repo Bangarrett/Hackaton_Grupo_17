@@ -29,6 +29,15 @@ function Merchandising({ addToCart }) {
           toggleFavorite={toggleFavorite}
         />
       </Grid>
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <CardItem
+          title="Kygo Sudadera"
+          image="./src/assets/kygo-camisa.webp"
+          description=""
+          addToCart={() => addToCart({ id: 2, title: 'Sudadera Kygo' })}
+          toggleFavorite={toggleFavorite}
+        />
+      </Grid>
       {/* Agrega más CardItems aquí */}
     </Grid>
   );
