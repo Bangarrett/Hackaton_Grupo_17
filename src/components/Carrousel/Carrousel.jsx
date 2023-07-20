@@ -64,9 +64,9 @@ const TrendingTracks = () => {
   };
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
   };
