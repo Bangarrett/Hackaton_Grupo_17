@@ -23,7 +23,9 @@ function App() {
       </div>
       <div className="main-content">
         <TrendingTracks />
-        <Merchandising addToCart={addToCart} />
+      </div> <br /><br />
+      <div className='main-content'>
+      <Merchandising addToCart={addToCart} />
       </div>
     </div>
   );
