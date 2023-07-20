@@ -5,12 +5,14 @@ import Merchandising from './components/card-item/Merchandising';
 import Cart from './components/card-item/Cart';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Notification from './components/notification/Notification';
 
 function App({ cartItems, addToCart, removeFromCart }) {
   return (
     <div className="app-container">
       <div className="main-content">
         <Navbar />
+        <Notification/>
         <TrendingTracks /><br /><br /><br />
         <Merchandising addToCart={addToCart} />
       </div>
