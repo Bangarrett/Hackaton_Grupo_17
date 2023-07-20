@@ -49,8 +49,8 @@ nav {
 
 .nav__search--logo {
     position: absolute;
-    top: 9.8%;
-    right: 25%;
+    top: 10%;
+    right: 29%;
     width: 1rem;
     height: 1rem;
     z-index: 3;
