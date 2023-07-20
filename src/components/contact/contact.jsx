@@ -3,7 +3,7 @@ import {Header} from '../../components/Header/Header'
 import "./Contacto.css" // Archivo CSS para el estilo
 import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
-import { Footer} from '../../components/Footer/Footer'
+import { Footer} from '../Footer/Footer'
 
 
 export function Contacto() {
