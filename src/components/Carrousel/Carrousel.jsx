@@ -39,13 +39,6 @@ const TrendingTracks = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
   };
-  const handlePlay = async trackId => {
-    const response = await axios.get(`https://discoveryprovider.audius.co/v1/tracks/${trackId}/stream`);
-    const audioUrl = response.data.data;
-    console.log(audioUrl);
-    const audioElement = new Audio(audioUrl);
-    audioElement.play();
-  };
   return (
     <div>
       <style>
