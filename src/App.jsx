@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import React from 'react';
 import './App.css';
 import TrendingTracks from './components/Carrousel/Carrousel';
@@ -5,10 +7,14 @@ import Merchandising from './components/card-item/Merchandising';
 import Cart from './components/card-item/Cart';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import FormModal from './components/FormModal.jsx';
 import Notification from './components/notification/Notification';
 
+// eslint-disable-next-line react/prop-types
 function App({ cartItems, addToCart, removeFromCart }) {
   return (
+    
+   
     <div className="app-container">
       <div className="main-content">
         <Navbar />
@@ -18,6 +24,7 @@ function App({ cartItems, addToCart, removeFromCart }) {
       </div>
       <div className="cart-container">  
       <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+      <FormModal/>
       <Footer/>
       </div>
     </div>
