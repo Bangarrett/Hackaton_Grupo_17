@@ -9,10 +9,10 @@ import ListItemText from '@mui/material/ListItemText';
 
 const CartContainer = styled('div')({
   boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
-  width: '390px',
+  width: '500px',
   padding: '16px',
-  borderRadius: '8px',
-  background: 'linear-gradient(to right, #cac531, #f3f9a7)',
+  borderRadius: '10px',
+  background: 'linear-gradient(to right, #ffff, #ffff)',
 });
 
 const CartHeader = styled('h2')({
@@ -21,7 +21,8 @@ const CartHeader = styled('h2')({
   fontSize: '24px',
   padding: '8px',
   borderRadius: '8px',
-  background: 'linear-gradient(to right, #cac531, #f3f9a7)',
+  background: 'linear-gradient(to right, #D3D3D3, #7f7f7f)',
+  color: 'Grey',
 });
 
 const CartItem = styled(ListItem)(({ theme }) => ({
@@ -31,7 +32,7 @@ const CartItem = styled(ListItem)(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'space-between',
   borderBottom: `1px solid ${theme.palette.divider}`,
-  background: 'linear-gradient(to right, #cac531, #f3f9a7)',
+  background: 'linear-gradient(to right, #7f7f7f, #7f7f7f)',
 }));
 
 const DeleteButton = styled(IconButton)(({ theme }) => ({
@@ -41,13 +42,13 @@ const DeleteButton = styled(IconButton)(({ theme }) => ({
 const Cart = ({ cartItems, removeFromCart }) => {
   return (
     <CartContainer>
-      <CartHeader>Carrito de Compra</CartHeader>
+      <CartHeader>Cart</CartHeader>
       <List>
         {cartItems.length > 0 ? (
           cartItems.map((item) => (
             <CartItem key={item.product.id}>
               <ListItemText primary={item.product.title} />
-              <ListItemText primary={`Cantidad: ${item.quantity}`} />
+              <ListItemText primary={`Quanty: ${item.quantity}`} />
               <DeleteButton
                 aria-label="delete"
                 size="small"
@@ -59,7 +60,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
           ))
         ) : (
           <ListItem>
-            <ListItemText primary="El carrito está vacío." />
+            <ListItemText primary="The cart is empty." />
           </ListItem>
         )}
       </List>
