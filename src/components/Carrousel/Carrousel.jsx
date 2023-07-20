@@ -3,6 +3,8 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './Carrousel.css'
+
 
 const TrendingTracks = () => {
   const [tracks, setTracks] = useState([]);
@@ -40,7 +42,7 @@ const TrendingTracks = () => {
     slidesToScroll: 1,
   };
   return (
-    <div>
+    <div className='carrousel'>
       <style>
         {`
           img {
