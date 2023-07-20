@@ -4,6 +4,7 @@ import TrendingTracks from './components/Carrousel';
 import Merchandising from './components/card-item/Merchandising';
 import Cart from './components/card-item/Cart';
 
+
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -24,7 +25,7 @@ function App() {
       <div className="main-content">
         <TrendingTracks />
       </div> <br /><br />
-      <div className='main-content'>
+      <div className='merchandising-container'>
       <Merchandising addToCart={addToCart} />
       </div>
     </div>

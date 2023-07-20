@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CardItem from './CardItem';
+import Grid from '@mui/material/Grid';
 
 function Merchandising({ addToCart }) {
   const toggleFavorite = () => {
@@ -8,23 +9,28 @@ function Merchandising({ addToCart }) {
   };
 
   return (
-    <div>
-      <CardItem
-        title="Rock T-shirt"
-        image="./src/assets/pinkflo.jpg"
-        description=""
-        addToCart={() => addToCart({ id: 1, title: 'Rock T-shirt' })}
-        toggleFavorite={toggleFavorite}
-      />
-      <CardItem
-        title="Pop Mug"
-        image="./src/assets/taza1.jpeg"
-        description=""
-        addToCart={() => addToCart({ id: 2, title: 'Pop Mug' })}
-        toggleFavorite={toggleFavorite}
-      />
-      {/* Agrega más CardItems */}
-    </div>
+    <Grid container spacing={2}>
+      {/* Agrega más CardItems aquí */}
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <CardItem
+          title="Rock T-shirt"
+          image="./src/assets/pinkflo.jpg"
+          description=""
+          addToCart={() => addToCart({ id: 1, title: 'Rock T-shirt' })}
+          toggleFavorite={toggleFavorite}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4} lg={3}>
+        <CardItem
+          title="Taza de grupo"
+          image="./src/assets/taza1.jpeg"
+          description=""
+          addToCart={() => addToCart({ id: 2, title: 'Taza de grupo' })}
+          toggleFavorite={toggleFavorite}
+        />
+      </Grid>
+      {/* Agrega más CardItems aquí */}
+    </Grid>
   );
 }
 
@@ -33,4 +39,3 @@ Merchandising.propTypes = {
 };
 
 export default Merchandising;
-
