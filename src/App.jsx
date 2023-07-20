@@ -2,9 +2,9 @@ import './App.css'
 import Merchandising from './components/card-item/CardItem'
 // import Merchandising2 from './components/card-item/CardItem2'
 import TrendingTracks from './components/Carrousel/Carrousel'
-import Navbar from './components/Navbar/Navbar'
-import ContactAlert from './components/contact-alert/ContactAlert'
-import Cart from './components/card-item/Cart';
+import Navbar from './src/components/Navbar/Navbar'
+import ContactAlert from './src/components/contact-alert/ContactAlert'
+import Cart from './src/components/card-item/Cart';
 
 
 function App() {
