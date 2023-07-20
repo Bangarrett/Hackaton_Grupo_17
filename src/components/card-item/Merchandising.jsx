@@ -13,10 +13,10 @@ function Merchandising({ addToCart }) {
       {}
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <CardItem
-          title="Camiseta Rolling Stones"
+          title="Rolling Stones T-shirt"
           image="./src/assets/rolling-stones.jpg"
           description=""
-          addToCart={() => addToCart({ id: 1, title: 'Camiseta Rolling Stones' })}
+          addToCart={() => addToCart({ id: 1, title: 'Rolling Stones T-shirt' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
@@ -31,55 +31,55 @@ function Merchandising({ addToCart }) {
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <CardItem
-          title="Taza Pink Floyd"
+          title="Pink Floyd Cup"
           image="./src/assets/taza1.jpeg"
           description=""
-          addToCart={() => addToCart({ id: 3, title: 'Taza Pink Floyd' })}
+          addToCart={() => addToCart({ id: 3, title: 'Pink Floyd Cup' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <CardItem
-          title="Kygo Sudadera"
+          title="Kygo Sweatshirt"
           image="./src/assets/kygo-camisa.webp"
           description=""
-          addToCart={() => addToCart({ id: 4, title: 'Sudadera Kygo' })}
+          addToCart={() => addToCart({ id: 4, title: 'Kygo Sweatshirt' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <CardItem
-          title="Taza Música"
+          title="Music Cup"
           image="./src/assets/taza-musica.jpg"
           description=""
-          addToCart={() => addToCart({ id: 5, title: 'Taza Música' })}
+          addToCart={() => addToCart({ id: 5, title: 'Music Cup' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <CardItem
-          title="DVD Deep Purple"
+          title="Deep Purple DVD"
           image="./src/assets/deep-purple.jpg"
           description=""
-          addToCart={() => addToCart({ id: 6, title: 'DVD Deep Purple' })}
+          addToCart={() => addToCart({ id: 6, title: 'Deep Purple DVD' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <CardItem
-          title="Camiseta Led Zeppelin"
+          title="Led Zeppelin T-shirt"
           image="./src/assets/led-zeppelin.jpg"
           description=""
-          addToCart={() => addToCart({ id: 7, title: 'Camiseta Led Zeppelin' })}
+          addToCart={() => addToCart({ id: 7, title: 'Led Zeppelin T-shirt' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
         <CardItem
-          title="CD Queen"
+          title="Queen CD"
           image="./src/assets/cd-queen.jpg"
           description=""
-          addToCart={() => addToCart({ id: 8, title: 'CD Queen' })}
+          addToCart={() => addToCart({ id: 8, title: 'Queen CD' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
