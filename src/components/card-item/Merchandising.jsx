@@ -16,7 +16,7 @@ function Merchandising({ addToCart }) {
           title="Camiseta Rolling Stones"
           image="./src/assets/rolling-stones.jpg"
           description=""
-          addToCart={() => addToCart({ id: 1, title: 'Sudadera Kygo' })}
+          addToCart={() => addToCart({ id: 1, title: 'Camiseta Rolling Stones' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
@@ -34,7 +34,7 @@ function Merchandising({ addToCart }) {
           title="Taza Pink Floyd"
           image="./src/assets/taza1.jpeg"
           description=""
-          addToCart={() => addToCart({ id: 3, title: 'Taza de grupo' })}
+          addToCart={() => addToCart({ id: 3, title: 'Taza Pink Floyd' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
@@ -52,7 +52,7 @@ function Merchandising({ addToCart }) {
           title="Taza Música"
           image="./src/assets/taza-musica.jpg"
           description=""
-          addToCart={() => addToCart({ id: 5, title: 'Sudadera Kygo' })}
+          addToCart={() => addToCart({ id: 5, title: 'Taza Música' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
@@ -61,7 +61,7 @@ function Merchandising({ addToCart }) {
           title="DVD Deep Purple"
           image="./src/assets/deep-purple.jpg"
           description=""
-          addToCart={() => addToCart({ id: 6, title: 'Sudadera Kygo' })}
+          addToCart={() => addToCart({ id: 6, title: 'DVD Deep Purple' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
@@ -70,7 +70,7 @@ function Merchandising({ addToCart }) {
           title="Camiseta Led Zeppelin"
           image="./src/assets/led-zeppelin.jpg"
           description=""
-          addToCart={() => addToCart({ id: 7, title: 'Sudadera Kygo' })}
+          addToCart={() => addToCart({ id: 7, title: 'Camiseta Led Zeppelin' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
@@ -79,7 +79,7 @@ function Merchandising({ addToCart }) {
           title="CD Queen"
           image="./src/assets/cd-queen.jpg"
           description=""
-          addToCart={() => addToCart({ id: 8, title: 'Sudadera Kygo' })}
+          addToCart={() => addToCart({ id: 8, title: 'CD Queen' })}
           toggleFavorite={toggleFavorite}
         />
       </Grid>
