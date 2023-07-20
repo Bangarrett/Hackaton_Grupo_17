@@ -61,7 +61,7 @@ const TrendingTracks = () => {
         url: track.permalink_url,
       });
     } else {
-      alert('Web Share API no está disponible en este navegador');
+      alert('Web Share API not available');
     }
   };
 
@@ -78,38 +78,36 @@ const TrendingTracks = () => {
       <style>
         {`
           p{
-            color: #777;
+            color: #FFFF;
           }
           .carousel-title, .track-title {
-          color: ##777;
+          color: #FFFF
+          ;
           }
           .carousel-container {
-            background: rgb(42,42,42);
-            background: linear-gradient(90deg, rgba(42,42,42,1) 0%, rgba(202,202,202,1) 100%);
+  
+            background: rgb(90, 90, 90);
             padding: 20px;
-<<<<<<< HEAD
             max-width: 100%;
             max-height: 80%;
-=======
-            
-            max-width: 1800px;
-            max-height: 400px;
->>>>>>> e0fa328a1c3b5cc13487bb63853bef1f4ae0946f
           }
           .carousel-title {
-            color: #777
+            color: #FFFFF
             color: white;
             text-align: center;
           }
           .track-title {
+            color: #FFFFF
             font-size: 18px;
             font-weight: bold;
             text-align: center;
           }
           .track-artist {
             font-size: 16px;
-            color: #777;
+            color: #FFFFF;
             text-align: center;
+
+          
           }
           img {
             display: block;
@@ -150,8 +148,8 @@ const TrendingTracks = () => {
               )}
               <h3 className="track-title">{track.title}</h3>
               <p className="track-artist">{track.user.name}</p>
-              <p>Género: {track.genre}</p>
-              <p>Duración: {track.duration} segundos</p>
+              <p> Genre: {track.genre}</p>
+              <p> Durantion: {track.duration} seg</p>
               <audio ref={ref => (audioRefs.current[track.id] = ref)} src={track.preview_url} />
               {playingTracks[track.id] ? (
                 <button onClick={() => handlePause(track.id)}>Pause</button>
