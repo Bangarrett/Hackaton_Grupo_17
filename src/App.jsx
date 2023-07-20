@@ -1,17 +1,32 @@
-import './App.css'
-import TrendingTracks from './components/Carrousel'
-import Merchandising from './components/card-item/CardItem'
-import Merchandising2 from './components/card-item/CardItem2'
+import React, { useState } from 'react';
+import './App.css';
+import TrendingTracks from './components/Carrousel';
+import Merchandising from './components/card-item/Merchandising';
+import Cart from './components/card-item/Cart';
+
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems([...cartItems, product]);
+  };
+
+  const removeFromCart = (productId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== productId);
+    setCartItems(updatedCartItems);
+  };
+
   return (
-    <>
-      <TrendingTracks />
-      <div id="card-item">
-      <Merchandising />
-      <Merchandising2/>
+    <div className="app-container">
+      <div className="cart-container">
+        <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
       </div>
-    </>
-  )
+      <div className="main-content">
+        <TrendingTracks />
+        <Merchandising addToCart={addToCart} />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
